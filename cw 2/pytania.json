@@ -1,0 +1,256 @@
+{
+  "questions": {
+    "Q1": {
+      "text": "Na jaki główny gatunek filmowy masz dziś ochotę?",
+      "answers": ["komedia", "horror", "sci_fi", "akcja", "dramat", "thriller"]
+    },
+    "Q2": {
+      "text": "Z kim zamierzasz oglądać film?",
+      "answers": ["samemu", "z_drugą_połówką", "ze_znajomymi", "z_rodziną"]
+    },
+    "Q3": {
+      "text": "Jakiego klimatu szukasz?",
+      "answers": ["luźny_i_lekki", "mroczny_i_ciężki", "zmuszający_do_myślenia", "pełen_adrenaliny"]
+    },
+    "Q4": {
+      "text": "Czy film może być starszy (sprzed 2000 roku)?",
+      "answers": ["true", "false"]
+    },
+    "Q5": {
+      "text": "Czy lubisz produkcje z elementami nadprzyrodzonymi lub magią?",
+      "answers": ["true", "false"]
+    },
+    "Q6": {
+      "text": "Czy masz czas na długi seans (powyżej 2,5 godziny)?",
+      "answers": ["true", "false"]
+    },
+    "Q7": {
+      "text": "Czy przeszkadza Ci duża ilość przemocy lub krwi na ekranie?",
+      "answers": ["true", "false"]
+    },
+    "Q8": {
+      "text": "Czy wolisz filmy oparte na faktach?",
+      "answers": ["true", "false"]
+    },
+    "Q9": {
+      "text": "Jakie tempo akcji preferujesz?",
+      "answers": ["szybkie", "umiarkowane", "powolne"]
+    },
+    "Q10": {
+      "text": "Jakie zakończenie filmu wolisz?",
+      "answers": ["happy_end", "zaskakujący_zwrot_akcji", "obojętne"]
+    }
+  },
+  "rules": [
+    {
+      "if": {"Q1": "komedia", "Q2": "ze_znajomymi", "Q3": "luźny_i_lekki"},
+      "then": {
+        "diagnosis": "Polecany film: Kac Vegas (2009) - idealna, szalona komedia do obejrzenia w grupie",
+        "action": "Przygotuj przekąski i nastaw się na luźny wieczór pełen śmiechu"
+      }
+    },
+    {
+      "if": {"Q1": "komedia", "Q2": "z_drugą_połówką", "Q10": "happy_end"},
+      "then": {
+        "diagnosis": "Polecany film: Kocha, lubi, szanuje (2011) - świetna komedia romantyczna z dobrą obsadą",
+        "action": "Zróbcie dobrą kolację i włączcie film na wieczorny relaks we dwoje"
+      }
+    },
+    {
+      "if": {"Q1": "komedia", "Q2": "z_rodziną", "Q7": "true"},
+      "then": {
+        "diagnosis": "Polecany film: Paddington 2 (2017) lub Shrek (2001) - bezpieczny i zabawny wybór familijny",
+        "action": "Zbierz całą rodzinę przed telewizorem"
+      }
+    },
+    {
+      "if": {"Q1": "komedia", "Q4": "true", "Q5": "true"},
+      "then": {
+        "diagnosis": "Polecany film: Dzień Świstaka (1993) lub Pogromcy duchów (1984) - klasyka z wątkiem fantastycznym",
+        "action": "Włącz klasykę kina z lat 80. lub 90."
+      }
+    },
+    {
+      "if": {"Q1": "komedia", "Q9": "szybkie", "Q7": "false"},
+      "then": {
+        "diagnosis": "Polecany film: Deadpool (2016) lub Zombieland (2009) - czarna komedia z krwawą akcją",
+        "action": "Wybierz seans z bezkompromisowym humorem dla dorosłych"
+      }
+    },
+    {
+      "if": {"Q1": "horror", "Q2": "ze_znajomymi", "Q5": "true"},
+      "then": {
+        "diagnosis": "Polecany film: Obecność (2013) - klasyczny, przerażający horror o duchach i demonach",
+        "action": "Zgaście wszystkie światła w pokoju dla lepszego efektu"
+      }
+    },
+    {
+      "if": {"Q1": "horror", "Q2": "samemu", "Q3": "mroczny_i_ciężki"},
+      "then": {
+        "diagnosis": "Polecany film: Dziedzictwo. Hereditary (2018) - ciężki, niepokojący horror psychologiczny",
+        "action": "Załóż słuchawki, aby w pełni poczuć mroczną atmosferę"
+      }
+    },
+    {
+      "if": {"Q1": "horror", "Q7": "true", "Q10": "zaskakujący_zwrot_akcji"},
+      "then": {
+        "diagnosis": "Polecany film: Inni (2001) lub Szósty zmysł (1999) - straszy klimatem, bez rozlewu krwi",
+        "action": "Uważnie śledź fabułę i wskazówki aż do finałowego twistu"
+      }
+    },
+    {
+      "if": {"Q1": "horror", "Q4": "true", "Q7": "false"},
+      "then": {
+        "diagnosis": "Polecany film: Lśnienie (1980) lub Coś (1982) - kultowy, bezwzględny klasyk gatunku",
+        "action": "Zanurz się w atmosferze klasycznego kina grozy"
+      }
+    },
+    {
+      "if": {"Q1": "horror", "Q5": "false", "Q9": "szybkie"},
+      "then": {
+        "diagnosis": "Polecany film: Uciekaj! (2017) lub Nie oddychaj (2016) - trzymający w napięciu horror bez duchów",
+        "action": "Przygotuj się na szybkie tempo i realistyczne zagrożenie"
+      }
+    },
+    {
+      "if": {"Q1": "sci_fi", "Q3": "zmuszający_do_myślenia", "Q6": "true"},
+      "then": {
+        "diagnosis": "Polecany film: Interstellar (2014) - epicka podróż kosmiczna na blisko 3 godziny",
+        "action": "Zarezerwuj sobie cały wieczór i duży ekran z dobrym nagłośnieniem"
+      }
+    },
+    {
+      "if": {"Q1": "sci_fi", "Q3": "zmuszający_do_myślenia", "Q6": "false"},
+      "then": {
+        "diagnosis": "Polecany film: Ex Machina (2014) lub Nowy początek (2016) - ambitne sci-fi w krótszym czasie",
+        "action": "Skup się na dialogach i filozoficznych pytaniach o technologię"
+      }
+    },
+    {
+      "if": {"Q1": "sci_fi", "Q4": "true", "Q3": "mroczny_i_ciężki"},
+      "then": {
+        "diagnosis": "Polecany film: Łowca androidów (1982) lub Obcy – 8. pasażer Nostromo (1979)",
+        "action": "Przygotuj się na gęsty, cyberpunkowy lub klaustrofobiczny klimat"
+      }
+    },
+    {
+      "if": {"Q1": "sci_fi", "Q9": "szybkie", "Q3": "pełen_adrenaliny"},
+      "then": {
+        "diagnosis": "Polecany film: Na skraju jutra (2014) lub Matrix (1999) - widowiskowa akcja sci-fi",
+        "action": "Nastaw się na dynamiczne efekty specjalne i walkę o przetrwanie"
+      }
+    },
+    {
+      "if": {"Q1": "sci_fi", "Q2": "z_rodziną", "Q4": "true"},
+      "then": {
+        "diagnosis": "Polecany film: Powrót do przyszłości (1985) - ponadczasowe kino przygodowe dla każdego",
+        "action": "Włącz film, który bawi zarówno młodszych, jak i starszych widzów"
+      }
+    },
+    {
+      "if": {"Q1": "akcja", "Q3": "pełen_adrenaliny", "Q9": "szybkie"},
+      "then": {
+        "diagnosis": "Polecany film: Mad Max: Na drodze gniewu (2015) - czysta, nieustająca adrenalina od pierwszej minuty",
+        "action": "Podkręć głośność, bo warstwa dźwiękowa robi tu ogromną robotę"
+      }
+    },
+    {
+      "if": {"Q1": "akcja", "Q7": "false", "Q2": "samemu"},
+      "then": {
+        "diagnosis": "Polecany film: John Wick (2014) - perfekcyjna choreografia walk bez kompromisów",
+        "action": "Ciesz się czystym kinem akcji z mistrzowską realizacją"
+      }
+    },
+    {
+      "if": {"Q1": "akcja", "Q7": "true", "Q2": "z_rodziną"},
+      "then": {
+        "diagnosis": "Polecany film: Indiana Jones: Poszukiwacze zaginionej Arki (1981) lub Spider-Man: Uniwersum (2018)",
+        "action": "Wybierz kino nowej przygody bez brutalnych scen"
+      }
+    },
+    {
+      "if": {"Q1": "akcja", "Q4": "true", "Q9": "szybkie"},
+      "then": {
+        "diagnosis": "Polecany film: Szklana pułapka (1988) lub Terminator 2 (1991) - absolutny fundament kina akcji",
+        "action": "Przypomnij sobie złote czasy kina akcji przełomu lat 80. i 90."
+      }
+    },
+    {
+      "if": {"Q1": "akcja", "Q6": "true", "Q3": "mroczny_i_ciężki"},
+      "then": {
+        "diagnosis": "Polecany film: Mroczny Rycerz (2008) lub Batman (2022) - długie, poważne kino superbohaterskie",
+        "action": "Zarezerwuj blisko 3 godziny na mroczną opowieść o Gotham"
+      }
+    },
+    {
+      "if": {"Q1": "dramat", "Q8": "true", "Q6": "true"},
+      "then": {
+        "diagnosis": "Polecany film: Oppenheimer (2023) lub Lista Schindlera (1993) - monumentalne kino historyczne",
+        "action": "Przygotuj się na wymagający, ale wybitny seans oparty na prawdziwych wydarzeniach"
+      }
+    },
+    {
+      "if": {"Q1": "dramat", "Q8": "true", "Q10": "happy_end"},
+      "then": {
+        "diagnosis": "Polecany film: Nietykalni (2011) - wzruszająca i zabawna historia oparta na faktach",
+        "action": "Idealny wybór na poprawę humoru i przywrócenie wiary w ludzi"
+      }
+    },
+    {
+      "if": {"Q1": "dramat", "Q4": "true", "Q10": "happy_end"},
+      "then": {
+        "diagnosis": "Polecany film: Skazani na Shawshank (1994) lub Forrest Gump (1994) - arcydzieła kina z lat 90.",
+        "action": "Włącz jeden z najlepiej ocenianych filmów w historii kina"
+      }
+    },
+    {
+      "if": {"Q1": "dramat", "Q2": "z_drugą_połówką", "Q9": "umiarkowane"},
+      "then": {
+        "diagnosis": "Polecany film: La La Land (2016) lub Pamiętnik (2004) - emocjonalna historia o miłości i marzeniach",
+        "action": "Przygotuj chusteczki na wypadek wzruszającego finału"
+      }
+    },
+    {
+      "if": {"Q1": "dramat", "Q3": "mroczny_i_ciężki", "Q2": "samemu"},
+      "then": {
+        "diagnosis": "Polecany film: Requiem dla snu (2000) lub Joker (2019) - wstrząsające studium upadku człowieka",
+        "action": "Wybierz ten tytuł tylko wtedy, gdy masz siłę na bardzo ciężkie emocjonalnie kino"
+      }
+    },
+    {
+      "if": {"Q1": "thriller", "Q10": "zaskakujący_zwrot_akcji", "Q3": "mroczny_i_ciężki"},
+      "then": {
+        "diagnosis": "Polecany film: Siedem (1995) lub Wyspa tajemnic (2010) - mroczny kryminał z genialnym finałem",
+        "action": "Nie czytaj żadnych recenzji przed seansem, żeby nie zepsuć sobie zakończenia"
+      }
+    },
+    {
+      "if": {"Q1": "thriller", "Q10": "zaskakujący_zwrot_akcji", "Q4": "true"},
+      "then": {
+        "diagnosis": "Polecany film: Podziemny krąg / Fight Club (1999) - kultowy thriller z niezapomnianym twistem",
+        "action": "Zwracaj uwagę na drobne detale ukryte w poszczególnych scenach"
+      }
+    },
+    {
+      "if": {"Q1": "thriller", "Q2": "z_drugą_połówką", "Q10": "zaskakujący_zwrot_akcji"},
+      "then": {
+        "diagnosis": "Polecany film: Zaginiona dziewczyna (2014) - przewrotny thriller o małżeństwie pełnym sekretów",
+        "action": "Świetny punkt wyjścia do dyskusji po zakończonym seansie"
+      }
+    },
+    {
+      "if": {"Q1": "thriller", "Q8": "true", "Q9": "powolne"},
+      "then": {
+        "diagnosis": "Polecany film: Zodiak (2007) - drobiazgowe śledztwo dziennikarskie oparte na faktach",
+        "action": "Wczuj się w powolne, ale niezwykle wciągające tempo śledztwa"
+      }
+    },
+    {
+      "if": {"Q1": "thriller", "Q3": "zmuszający_do_myślenia", "Q7": "false"},
+      "then": {
+        "diagnosis": "Polecany film: Parasite (2019) lub Labirynt (2013) - trzymające w napięciu kino najwyższej próby",
+        "action": "Przygotuj się na nieprzewidywalny rozwój wydarzeń"
+      }
+    }
+  ]
+}
